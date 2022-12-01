@@ -1,98 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Orar USARB</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container_tot">
-            <div class="container_left">
-                <div class="container_1">
-                    <div class="element_Zagolovok"> Orarul Cursurilor</div>
-                </div>
-                <div class="container_button">
-                    <button class="element_1"></button>
-                    <button class="element_2"></button>
-                    <button class="element_3"></button>
-                </div>
-                <div class="Poisc">
-                    <form> 
-                        <input type="text" name=text" class="search" placeholder"Search here!"">
-                        <input type="submit" name="submit" class="submit" value="Search">
-                    </form>
-                </div>
-                <div class="Tablita">
-                    <table>
-                        <tbody>
-                            <td> 
-                                <button> Liniea_1 </button>
-                            </td>
-                        </tbody>
-                        <tbody>
-                          <td>
-                            <button> Liniea_2 </button> 
-                          </td>
-                        </tbody>
-                        <tbody>
-                            <td> 
-                                <button> Liniea_3 </button>
-                            </td>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="Zi">
-                    <select>
-                        <option value="ziua" selected>Ziua</option>
-                        <option value="Luni">Luni</option>
-                        <option value="Marti">Marti</option>
-                        <option value="Miercuri">Miercuri</option>
-                        <option value="Joi">Joi</option>
-                        <option value="Vineri" >Vineri</option>
-                        <option value="Sambata" >Sambata</option>
-                        <option value="Duminica" >Duminica</option>
-                    </select>
-                </div>
-                <div class="Data">
-                    <select id="weekSelector" class="nedeli">
-                        <option value="-1">Săptămîna</option>
-                        <option value="1" class="initial">1 (29.8.2022 - 4.9.2022)</option>
-                        <option value="2" class="initial">2 (5.9.2022 - 11.9.2022)</option>
-                        <option value="3" class="initial">3 (12.9.2022 - 18.9.2022)</option>
-                        <option value="4" class="initial">4 (19.9.2022 - 25.9.2022)</option>
-                        <option value="5" class="initial">5 (26.9.2022 - 2.10.2022)</option>
-                        <option value="6" class="initial">6 (3.10.2022 - 9.10.2022)</option>
-                        <option value="7" class="initial">7 (10.10.2022 - 16.10.2022)</option>
-                        <option value="8" class="initial">8 (17.10.2022 - 23.10.2022)</option>
-                        <option value="9" class="initial">9 (24.10.2022 - 30.10.2022)</option>
-                        <option value="10" class="initial">10 (31.10.2022 - 6.11.2022)</option>
-                        <option value="11" class="initial">11 (7.11.2022 - 13.11.2022)</option>
-                        <option value="12" class="initial">12 (14.11.2022 - 20.11.2022)</option>
-                        <option value="13" class="initial">13 (21.11.2022 - 27.11.2022)</option>
-                        <option value="14" class="initial">14 (28.11.2022 - 4.12.2022)</option>
-                        <option value="15" class="initial">15 (5.12.2022 - 11.12.2022)</option>
-                        <option value="16" class="initial">16 (12.12.2022 - 18.12.2022)</option>
-                        <option value="17" class="initial">17 (19.12.2022 - 25.12.2022)</option>
-                        <option value="18" class="initial">18 (26.12.2022 - 1.1.2023)</option>
-                        <option value="19" class="initial">19 (2.1.2023 - 8.1.2023)</option>
-                        <option value="20" class="initial">20 (9.1.2023 - 15.1.2023)</option>
-                        <option value="21" class="initial">21 (16.1.2023 - 22.1.2023)</option>
-                    </select>
-                </div>
-                <div class="Semestru"></div>
-                <div class="Raspisanie"></div>
-                <div class="Abriviatura"></div>
-                <div class="Vse"></div>
-                <div class="Ora lucrare"></div>
-            </div>
-            <div class="container_right">
-              <img src="logo_usarb_new.png" alt="error">
-                <div class="container_12"></div>
-                <div class="container_13"></div>
-                <div class="container_14"></div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orar USARB</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container_left">
+      <div uk-alert class="section">
+        <h1 class="element_zagolovok">Orarul Cursurilor</h1>
+      </div>
+      <div class="container_button">
+        <button class="element_gr">Grupe</button>
+        <button class="element_pr">Profesori</button>
+        <button class="element_au">Aule</button>
+      </div>
+      <div class="poisc">
+        <form class="" action="/action_page.php">
+          <button class="iiii" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+          <input type="text" placeholder="Search.." name="search" class="vse" />
+        </form>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+      </div>
+      <div class="Zi">
+        <select>
+          <option value="ziua" selected>Ziua</option>
+          <option value="Luni">Luni</option>
+          <option value="Marti">Marti</option>
+          <option value="Miercuri">Miercuri</option>
+          <option value="Joi">Joi</option>
+          <option value="Vineri">Vineri</option>
+          <option value="Sambata">Sambata</option>
+          <option value="Duminica">Duminica</option>
+        </select>
+      </div>
+      <div class="Data">
+        <select id="weekSelector" class="nedeli">
+          <option value="-1">Săptămîna</option>
+          <option value="1" class="initial">1 (29.8.2022 - 4.9.2022)</option>
+          <option value="2" class="initial">2 (5.9.2022 - 11.9.2022)</option>
+          <option value="3" class="initial">3 (12.9.2022 - 18.9.2022)</option>
+          <option value="4" class="initial">4 (19.9.2022 - 25.9.2022)</option>
+          <option value="5" class="initial">5 (26.9.2022 - 2.10.2022)</option>
+          <option value="6" class="initial">6 (3.10.2022 - 9.10.2022)</option>
+          <option value="7" class="initial">7 (10.10.2022 - 16.10.2022)</option>
+          <option value="8" class="initial">8 (17.10.2022 - 23.10.2022)</option>
+          <option value="9" class="initial">9 (24.10.2022 - 30.10.2022)</option>
+          <option value="10" class="initial">
+            10 (31.10.2022 - 6.11.2022)
+          </option>
+          <option value="11" class="initial">
+            11 (7.11.2022 - 13.11.2022)
+          </option>
+          <option value="12" class="initial">
+            12 (14.11.2022 - 20.11.2022)
+          </option>
+          <option value="13" class="initial">
+            13 (21.11.2022 - 27.11.2022)
+          </option>
+          <option value="14" class="initial">
+            14 (28.11.2022 - 4.12.2022)
+          </option>
+          <option value="15" class="initial">
+            15 (5.12.2022 - 11.12.2022)
+          </option>
+          <option value="16" class="initial">
+            16 (12.12.2022 - 18.12.2022)
+          </option>
+          <option value="17" class="initial">
+            17 (19.12.2022 - 25.12.2022)
+          </option>
+          <option value="18" class="initial">18 (26.12.2022 - 1.1.2023)</option>
+          <option value="19" class="initial">19 (2.1.2023 - 8.1.2023)</option>
+          <option value="20" class="initial">20 (9.1.2023 - 15.1.2023)</option>
+          <option value="21" class="initial">21 (16.1.2023 - 22.1.2023)</option>
+        </select>
+      </div>
+      <div class="Semestru">
+        <select name="semestru" id="weekSelector">
+          <option value="Semestru" class="initial">Semestru</option>
+          <option value="1" class="initial">1</option>
+          <option value="2" class="initial">2</option>
+        </select>
+      </div>
+      <div class="grid-container-qw">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+        <div class="grid-item">16</div>
+        <div class="grid-item">17</div>
+      </div>
+      <div class="Abriviatura">
+        <div>P_Prelegere</div>
+        <div>L-Laborator</div>
+        <div>PC-Proecte de Curs</div>
+        <div>EP-Evaluare pereodică</div>
+        <div>C-Consultație</div>
+        <div>E-Examenare</div>
+        <div>R-Reexamenare</div>
+        <div>Descarcă</div>
+        <div>Student</div>
+        <div>Examene</div>
+        <div class="anunt">Orarul nu lucrează între 23:00 și 5:00</div>
+      </div>
+      <div class=""></div>
+      <div class="Ora lucrare"></div>
+    </div>
+    <div class="container_right">
+      <div class="container_logo">
+        <img src="logo_usarb_new.png" alt="error" class="im" />
+      </div>
+      <div class="container_text">
+        UNIVERSITATEA DE STAT „ALECU RUSSO DIN BĂLȚI"
+      </div>
+    </style><div class="toate_zi">
+        <div class="vremea">
+          8:00 <br />
+          9:30
         </div>
-    </body>
+        <div class="pari"></div>
+        <div class="vremea">
+          9:45 <br />
+          11:15
+        </div>
+        <div class="pari"></div>
+        <div class="vremea">
+          11:30 <br />
+          13:00
+        </div>
+        <div class="pari"></div>
+        <div class="vremea">
+          13:15 <br />
+          14:45
+        </div>
+        <div class="pari"></div>
+        <div class="vremea">
+          15:00 <br />
+          16:30
+        </div>
+        <div class="pari"></div>
+        <div class="vremea">
+          16:45 <br />
+          18:15
+        </div>
+        <div class="pari"></div>
+        <div class="vremea">
+          18:30 <br />
+          20:00
+        </div>
+        <div class="pari"></div>
+    </div>
+  </body>
 </html>
